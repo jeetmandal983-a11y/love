@@ -1,0 +1,97 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff69b4, #ffb6c1, #ff1493);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    animation: fadeIn 2s ease-in;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.countdown {
+    font-size: 2em;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.reveal-btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.reveal-btn:hover {
+    background: #ff69b4;
+}
+
+.surprise {
+    display: none;
+    font-size: 1.5em;
+    margin-top: 20px;
+    animation: bounceIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Floating hearts animation */
+body::before {
+    content: '❤️';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 2em;
+    animation: float 6s infinite;
+}
+
+body::after {
+    content: '💕';
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    font-size: 2em;
+    animation: float 8s infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
